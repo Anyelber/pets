@@ -1,0 +1,13 @@
+{
+    "name": "pets/pets",
+    "description": "Pets Test",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Anyelber Boscan"
+        }
+    ],
+    "require": {
+        "laravel/installer": "^4.2"
+    }
+}

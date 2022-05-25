@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pet Sitting - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+
+    <div class="wrap">
+			<div class="container">
+				
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	    	<a class="navbar-brand" href="index.html"><span class="flaticon-pawprint-1 mr-2"></span>Pet shop</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="fa fa-bars"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" style="display: flex !important; justify-content: flex-end;" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	        	<li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+	          <li class="nav-item active"><a href="gallery.html" class="nav-link">Mascotas</a></li>
+	          <li class="nav-item"><a href="administrar.html" class="nav-link">Administrar Mascotas</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end">
+          <div class="col-md-9 ftco-animate pb-5">
+          	<p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Pet Shop <i class="ion-ios-arrow-forward"></i></a></span> <span> <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-0 bread">Gallery</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section">
+			<div class="container">
+        <label>Filtrar Por...</label>
+
+        <div class="row">
+          <div class="col-md-4 col-lg-4 col-sm4">
+            <div class="row">
+              <div class="col-md-11 col-lg-11 col-sm-11">
+                <select multiple id="filterStatus" class="form-control">
+                  <option value="">Seleccione un status para filtrar</option>
+                  <option value="pending">Pending</option>
+                  <option value="available">Available</option>
+                  <option value="sold">Sold</option>
+                </select>
+
+              </div>
+              <div class="col-md-1 col-sm-1 col-lg-1">
+                <button onclick="filterStatus();" class="btn btn-success"><i class="fa fa-search"></i></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4 col-sm-4"></div>
+          <div class="col-md-4 col-lg-4 col-sm-4">
+            <div class="row">
+              <div class="col-md-11 col-sm-11 col-lg-11">
+                <input style="height: 34px !important;" type="text" id="idFilter" class="form-control" placeholder="Filtrar por un ID">              
+              </div>
+              <div class="col-md-1 col-sm-1 col-lg-1">
+                <button onclick="filterId();" class="btn btn-success"><i class="fa fa-search"></i></i></button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+				<div class="row mt-5" id="galeria">
+          
+         
+        </div>
+       
+			</div>
+		</section>
+
+    <footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+						<h2 class="footer-heading">Petsitting</h2>
+						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+						<ul class="ftco-footer-social p-0">
+              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span class="fa fa-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="fa fa-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="fa fa-instagram"></span></a></li>
+            </ul>
+					</div>
+					<div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+						<h2 class="footer-heading">Latest News</h2>
+						<div class="block-21 mb-4 d-flex">
+              <a class="img mr-4 rounded" style="background-image: url(images/image_1.jpg);"></a>
+              <div class="text">
+                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                <div class="meta">
+                  <div><a href="#"><span class="icon-calendar"></span> April 7, 2020</a></div>
+                  <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                  <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-21 mb-4 d-flex">
+              <a class="img mr-4 rounded" style="background-image: url(images/image_2.jpg);"></a>
+              <div class="text">
+                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                <div class="meta">
+                  <div><a href="#"><span class="icon-calendar"></span> April 7, 2020</a></div>
+                  <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                  <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                </div>
+              </div>
+            </div>
+					</div>
+					<div class="col-md-6 col-lg-3 pl-lg-5 mb-4 mb-md-0">
+						<h2 class="footer-heading">Quick Links</h2>
+						<ul class="list-unstyled">
+              <li><a href="#" class="py-2 d-block">Home</a></li>
+              <li><a href="#" class="py-2 d-block">About</a></li>
+              <li><a href="#" class="py-2 d-block">Services</a></li>
+              <li><a href="#" class="py-2 d-block">Works</a></li>
+              <li><a href="#" class="py-2 d-block">Blog</a></li>
+              <li><a href="#" class="py-2 d-block">Contact</a></li>
+            </ul>
+					</div>
+					<div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+						<h2 class="footer-heading">Have a Questions?</h2>
+						<div class="block-23 mb-3">
+              <ul>
+                <li><span class="icon fa fa-map"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+                <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">info@yourdomain.com</span></a></li>
+              </ul>
+            </div>
+					</div>
+				</div>
+				<div class="row mt-5">
+          <div class="col-md-12 text-center">
+
+            <p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+			</div>
+		</footer>
+
+
+    
+<div class="modal fade" id="editMascota" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Nombre</label>
+          <input type="text" id="nombreEditar" class="form-control" value=""/>
+        </div>
+        <div class="form-group">
+          <label>Status</label>
+          <select id="statusEdit" class="form-control">
+            <option value="">Seleccione un status</option>
+            <option value="pending">Pending</option>
+            <option value="available">Available</option>
+            <option value="sold">Sold</option>
+          </select>
+        </div>
+
+        <input type="hidden" id="idmedit"/>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" onclick="actualizar()" class="btn btn-primary">Guardar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/css/bootstrap-select.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/js/bootstrap-select.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  
+    <script>
+      
+	    const baseUrl = "http://localhost/pets/laravel/public/";
+
+      $(document).ready(function(){
+        cargarGaleria();
+        $("#filterStatus").selectpicker();
+      });
+
+      async function cargarGaleria(){
+          await axios({
+            url: baseUrl+"getPets",
+            method: "get"
+          }).then(element=>{
+            console.log(element);
+            let data = element.data.data;
+
+            data.forEach(e=>{
+
+              console.log(e);
+
+              let image;
+              if(e.photos[0]){
+                image = e.photos[0].image;
+              }else{
+                image = "noimage.png";
+              }
+
+              let html = `
+                <div class="col-md-4">
+                  <div style="background-size: cover; flex-wrap: wrap; min-height: 300px; display:flex; align-items:flex-end; background-image: url(${baseUrl}photos/${image});">
+                    
+                    <div class="text w-100 mb-3 ml-2 mr-2" style="display: flex; width: 100%; justify-content: end">
+                      <a href="#" style="padding: 5px 7px" data-toggle="modal" data-target="#editMascota" onclick="editarMascota(${e.id})" class="btn btn-info"><i class="fa fa-edit"></i></a>
+                    </div>
+        
+                    <div class="text w-100 mb-3 ml-2 mr-2" style="background:rgba(255,255,255,0.6)">
+                      <span>${e.category.name}</span>
+                      <h2>${e.name}</h2>
+                    </div>
+                  </div>
+                </div>
+              `;
+
+              $("#galeria").append(html);
+
+
+            });
+          })
+      }
+
+      async function editarMascota(idm){
+        $("#idmedit").val(idm);
+
+        await axios({
+          url: baseUrl+"pet/"+idm,
+          method: "get"
+        }).then(element=>{
+          $("#nombreEditar").val(element.data.data[0].name);
+          $("#statusEdit").val(element.data.data[0].status);
+        })
+
+      }
+
+      async function actualizar(){
+        let idm = $("#idmedit").val();
+        let name = $("#nombreEditar").val();
+        let status = $("#statusEdit").val();
+
+        let formData = new FormData();
+
+        formData.append("id",idm);
+        formData.append("name",name);
+        formData.append("status",status);
+
+        await axios({
+          url: baseUrl+"pet/"+idm,
+          method: "post",
+          data: formData
+        }).then(res=>{
+          if(res.data.result){
+              Swal.fire(
+                  '',
+                  res.data.msg,
+                  'success'
+              ).then(function loaded(){
+                  location.reload();
+              });
+          }else{
+              Swal.fire(
+                  '',
+                  res.data.msg,
+                  'success'
+              )
+          }
+        });
+      }
+
+      async function filterStatus(){
+        let status = $("#filterStatus").val();
+
+        console.log(status);
+
+        $("#galeria").html('');
+
+        await axios({
+          url: baseUrl+"pet/findByStatus",
+          params: {
+            "status" : status.toString()
+          },
+          method: "get"
+        }).then(res=>{
+          if(res.data.result){
+            res.data.data.forEach(e=>{
+              let image;
+              if(e.photos[0]){
+                image = e.photos[0].image;
+              }else{
+                image = "noimage.png";
+              }
+              let html = `
+                <div class="col-md-4">
+                  <div style="background-size: cover; flex-wrap: wrap; min-height: 300px; display:flex; align-items:flex-end; background-image: url(${baseUrl}photos/${image});">
+                    
+                    <div class="text w-100 mb-3 ml-2 mr-2" style="display: flex; width: 100%; justify-content: end">
+                      <a href="#" style="padding: 5px 7px" data-toggle="modal" data-target="#editMascota" onclick="editarMascota(${e.id})" class="btn btn-info"><i class="fa fa-edit"></i></a>
+                    </div>
+        
+                    <div class="text w-100 mb-3 ml-2 mr-2" style="background:rgba(255,255,255,0.6)">
+                      <span>${e.category.name}</span>
+                      <h2>${e.name}</h2>
+                    </div>
+                  </div>
+                </div>
+              `;
+
+              $("#galeria").append(html);
+            })
+          }else{
+            Swal.fire('', res.data.msg, 'error');
+          }
+        })
+
+      }
+
+      async function filterId(){
+        let id = $("#idFilter").val();
+        $("#galeria").html('');
+
+        await axios({
+          url: baseUrl+"pet/"+id,
+          method: "get"
+        }).then(res=>{
+
+          console.log(res);
+
+          if(res.data.result){
+              res.data.data.forEach(e=>{
+                let image;
+                if(e.photos[0]){
+                  image = e.photos[0].image;
+                }else{
+                  image = "noimage.png";
+                }
+                let html = `
+                  <div class="col-md-4">
+                    <div style="background-size: cover; flex-wrap: wrap; min-height: 300px; display:flex; align-items:flex-end; background-image: url(${baseUrl}photos/${image});">
+                      
+                      <div class="text w-100 mb-3 ml-2 mr-2" style="display: flex; width: 100%; justify-content: end">
+                        <a href="#" style="padding: 5px 7px" data-toggle="modal" data-target="#editMascota" onclick="editarMascota(${e.id})" class="btn btn-info"><i class="fa fa-edit"></i></a>
+                      </div>
+          
+                      <div class="text w-100 mb-3 ml-2 mr-2" style="background:rgba(255,255,255,0.6)">
+                        <span>${e.category.name}</span>
+                        <h2>${e.name}</h2>
+                      </div>
+                    </div>
+                  </div>
+                `;
+
+                $("#galeria").append(html);
+              })
+          }else{
+            Swal.fire('', res.data.msg, 'error');
+          }
+        }).catch(function (err){
+          if(err.response){
+            if(err.response.status == 404){
+              Swal.fire('', "Pet not found", 'error');
+            }
+          }
+        });
+      }
+
+      
+    </script>
+
+
+    
+  </body>
+</html>
